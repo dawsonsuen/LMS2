@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Model\" />
+    <Folder Include="Model\DTO\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.11" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+  </ItemGroup>
+
+<ItemGroup>
+  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+</ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\DbContext.cs" />
+    <Compile Remove="Controllers\ValuesController.cs" />
+    <Compile Remove="Migrations\20180425020644_Init.Designer.cs" />
+    <Compile Remove="Migrations\20180425020644_Init.cs" />
+    <Compile Remove="Migrations\20180425072013_Init.cs" />
+    <Compile Remove="Migrations\20180425072013_Init.Designer.cs" />
+    <Compile Remove="Migrations\LMSDbContextModelSnapshot.cs" />
+    <Compile Remove="Controllers\ValuesController.cs" />
+    <Compile Remove="Migrations\20180516080758_1.cs" />
+    <Compile Remove="Migrations\20180516110850_1.cs" />
+  </ItemGroup>
+</Project>

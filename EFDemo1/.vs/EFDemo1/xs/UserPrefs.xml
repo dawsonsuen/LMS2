@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{A8109866-0DC0-480A-AD21-477D8595D45D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Model/Course.cs" Line="8" Column="1" />
+      <File FileName="Model/LMSDataStore.cs" Line="38" Column="10" />
+      <File FileName="Model/LMSDbContext.cs" Line="11" Column="19" />
+      <File FileName="Program.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.EFDemo1 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
