@@ -7,10 +7,10 @@ namespace EFDemo1.Model
     {
         //Course
         IEnumerable<Course> GetAllCourses();
-        Course GetCourse(int CourseId);
-		void AddCourse(Course course, Assignment assignment);
-        void EditCourse(int CourseId, Course course);
-        void DeleteCourse(int CourseId);
+        Course GetCourse(int Id);
+		void AddCourse(Course course);
+        void EditCourse(int Id, Course course);
+        void DeleteCourse(int Id);
         //Student
         IEnumerable<Student> GetAllStudents();
         Student GetStudent(int StudentId);
@@ -19,10 +19,10 @@ namespace EFDemo1.Model
         void DeleteStudent(int StudentId);
         //Lecturer
         IEnumerable<Lecturer> GetAllLecturers();
-        Lecturer GetLecturer(int LecturerId);
+        Lecturer GetLecturer(int Id);
         void AddLecturer(Lecturer lecturer);
-        void EditLecturer(int LecturerId, Lecturer lecturer);
-        void DeleteLecturer(int LecturerId);
+        void EditLecturer(int Id, Lecturer lecturer);
+        void DeleteLecturer(int Id);
 		//Enrolment
         
 		void AddEnrolment(int CourseId,int StudentId);

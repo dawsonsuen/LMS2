@@ -12,23 +12,24 @@ namespace EFDemo1.Migrations
                 name: "Courses",
                 columns: table => new
                 {
-                    CourseId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
                     CourseCode = table.Column<string>(nullable: true),
                     Credit = table.Column<int>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
                     MaxNumber = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Courses", x => x.CourseId);
+                    table.PrimaryKey("PK_Courses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Lecturers",
                 columns: table => new
                 {
-                    LecturerId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:AutoIncrement", true),
                     Feedback = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
@@ -36,7 +37,7 @@ namespace EFDemo1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Lecturers", x => x.LecturerId);
+                    table.PrimaryKey("PK_Lecturers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,7 +71,7 @@ namespace EFDemo1.Migrations
                         name: "FK_Assignment_Courses_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Courses",
-                        principalColumn: "CourseId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -89,7 +90,7 @@ namespace EFDemo1.Migrations
                         name: "FK_LecturerDetail_Lecturers_LecturerId",
                         column: x => x.LecturerId,
                         principalTable: "Lecturers",
-                        principalColumn: "LecturerId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -107,13 +108,13 @@ namespace EFDemo1.Migrations
                         name: "FK_Teaching_Courses_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Courses",
-                        principalColumn: "CourseId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Teaching_Lecturers_LecturerId",
                         column: x => x.LecturerId,
                         principalTable: "Lecturers",
-                        principalColumn: "LecturerId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -134,7 +135,7 @@ namespace EFDemo1.Migrations
                         name: "FK_Enrolments_Courses_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Courses",
-                        principalColumn: "CourseId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Enrolments_Students_StudentId",

@@ -16,8 +16,8 @@ namespace EFDemo1.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             //Course
-            modelBuilder.Entity<Course>().HasKey(a => a.CourseId);
-            modelBuilder.Entity<Course>().Property(a => a.CourseId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Course>().HasKey(a => a.Id);
+            modelBuilder.Entity<Course>().Property(a => a.Id).ValueGeneratedOnAdd();
             //Assignment(one Course to many)
             modelBuilder.Entity<Assignment>().HasKey(a => a.Code);
 
@@ -73,16 +73,16 @@ namespace EFDemo1.Model
                         .WithMany(s => s.Enrolments)
                         .HasForeignKey(e => e.StudentId);
             //Lecturer
-            modelBuilder.Entity<Lecturer>().HasKey(a => a.LecturerId);
+            modelBuilder.Entity<Lecturer>().HasKey(a => a.Id);
 
-            modelBuilder.Entity<Lecturer>().Property(a => a.LecturerId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Lecturer>().Property(a => a.Id).ValueGeneratedOnAdd();
            
             //LecturerDetail(one Lecturer to one LecturerDetail)
 
 
 
 
-			modelBuilder.Entity<LecturerDetail>().HasKey(a => a.LecturerId);
+            modelBuilder.Entity<LecturerDetail>().HasKey(a => a.LecturerId);
             modelBuilder.Entity<LecturerDetail>()
 			            .Property(a => a.LecturerId).ValueGeneratedOnAdd();
             
@@ -105,7 +105,7 @@ namespace EFDemo1.Model
             
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-			var connectionString = "server = localhost; userid = root; pwd =; port = 3306; database = lms_teama; sslmode = none";
+            var connectionString = "server = 13.54.17.147; userid = lms_teamaroot; pwd =password; port = 3306; database = lms_teama; sslmode = none";
             optionsBuilder.UseMySQL(connectionString);
             base.OnConfiguring(optionsBuilder);
         }

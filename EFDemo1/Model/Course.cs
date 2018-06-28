@@ -13,14 +13,16 @@ namespace EFDemo1.Model
             newCourse.MaxNumber = course.MaxNumber;
             newCourse.Credit = course.Credit;
             newCourse.CourseCode = course.CourseCode;
+            //newCourse.Description = course.Description;
             return newCourse;
         }
 
-        public int CourseId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int MaxNumber { get; set; }
         public int Credit { get; set; }
         public string CourseCode { get; set; }
+        //public string Description { get; set; }
         public ICollection<Teaching> Teachings { get; set; }
 
         public ICollection<Enrolment> Enrolments { get; set; }

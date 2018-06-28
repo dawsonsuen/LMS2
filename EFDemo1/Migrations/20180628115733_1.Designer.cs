@@ -10,7 +10,7 @@ using System;
 namespace EFDemo1.Migrations
 {
     [DbContext(typeof(LMSDbContext))]
-    [Migration("20180516113113_1")]
+    [Migration("20180628115733_1")]
     partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,18 +37,20 @@ namespace EFDemo1.Migrations
 
             modelBuilder.Entity("EFDemo1.Model.Course", b =>
                 {
-                    b.Property<int>("CourseId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("CourseCode");
 
                     b.Property<int>("Credit");
 
+                    b.Property<string>("Description");
+
                     b.Property<int>("MaxNumber");
 
                     b.Property<string>("Name");
 
-                    b.HasKey("CourseId");
+                    b.HasKey("Id");
 
                     b.ToTable("Courses");
                 });
@@ -74,7 +76,7 @@ namespace EFDemo1.Migrations
 
             modelBuilder.Entity("EFDemo1.Model.Lecturer", b =>
                 {
-                    b.Property<int>("LecturerId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Feedback");
@@ -83,7 +85,7 @@ namespace EFDemo1.Migrations
 
                     b.Property<double>("Payroll");
 
-                    b.HasKey("LecturerId");
+                    b.HasKey("Id");
 
                     b.ToTable("Lecturers");
                 });

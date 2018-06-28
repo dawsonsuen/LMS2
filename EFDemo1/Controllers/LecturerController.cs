@@ -22,11 +22,11 @@ namespace EFDemo1.Controllers
             return Ok(_dbstore.GetAllLecturers());
         }
 
-        [HttpGet("{LecturerId}")]
-        public IActionResult Get(int LecturerId)
+        [HttpGet("{Id}")]
+        public IActionResult Get(int Id)
         {
             IActionResult result;
-            var lecturer = _dbstore.GetLecturer(LecturerId);
+            var lecturer = _dbstore.GetLecturer(Id);
             if (lecturer != null)
             {
                 result = Ok(lecturer);
@@ -48,17 +48,17 @@ namespace EFDemo1.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut("{LecturerId}")]
-        public void Put(int LecturerId, [FromBody] Lecturer lecturer)
+        [HttpPut("{Id}")]
+        public void Put(int Id, [FromBody] Lecturer lecturer)
         {
-			_dbstore.EditLecturer(LecturerId, lecturer);
+			_dbstore.EditLecturer(Id, lecturer);
         }
 
         // DELETE api/values/5
         [HttpDelete("{LecturerId}")]
-        public void Delete(int LecturerId)
+        public void Delete(int Id)
         {
-			_dbstore.DeleteLecturer(LecturerId);
+			_dbstore.DeleteLecturer(Id);
         }
     }
 }

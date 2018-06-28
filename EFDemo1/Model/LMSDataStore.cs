@@ -17,43 +17,45 @@ namespace EFDemo1.Model
         public IEnumerable<Course> GetAllCourses()
         {
             var result=_ctx.Courses
-                           .Include(c => c.Assignments)
-                           .Include(c => c.Enrolments)
-                           .ThenInclude(e => e.Student)
-                           .Include(c=>c.Teachings)
-                           .ThenInclude(t=>t.Lecturer)
-                           .OrderBy(c => c.CourseId).ToList();
+                           //.Include(c => c.Assignments)
+                           //.Include(c => c.Enrolments)
+                           //.ThenInclude(e => e.Student)
+                           //.Include(c=>c.Teachings)
+                           //.ThenInclude(t=>t.Lecturer)
+                           .OrderBy(c => c.Id).ToList();
             return result;
         }
-        public async Task<IEnumerable<Course>> GetAllCoursesAsync()
-        {
-            return await _ctx.Courses.OrderBy(course => course.CourseId).ToListAsync();
-        }
-        public Course GetCourse(int CourseId)
+        //public async Task<IEnumerable<Course>> GetAllCoursesAsync()
+        //{
+        //    return await _ctx.Courses.OrderBy(course => course.Id).ToListAsync();
+        //}
+        public Course GetCourse(int Id)
         {
             
-            return _ctx.Courses.Find(CourseId);
+            return _ctx.Courses.Find(Id);
         }
-		public void AddCourse(Course course, Assignment assignment)
+		public void AddCourse(Course course)
         {
 
 			_ctx.Courses.Add(course);
-			_ctx.Courses.Add(assignment);    
+			//_ctx.Courses.Add(assignment);    
             Save();
             
         }
 
-        public void EditCourse(int CourseId, Course course)
+        public void EditCourse(int Id, Course course)
         {
-            Course courseToEdit = _ctx.Courses.Find(CourseId);
+            Course courseToEdit = _ctx.Courses.Find(Id);
             courseToEdit.Name = course.Name;
             courseToEdit.MaxNumber = course.MaxNumber;
             courseToEdit.Credit = course.Credit;
+			courseToEdit.CourseCode = course.CourseCode;
+            //courseToEdit.Description = course.Description;
             Save();
         }
-        public void DeleteCourse(int CourseId)
+        public void DeleteCourse(int Id)
         {
-            var course = _ctx.Courses.Find(CourseId);
+            var course = _ctx.Courses.Find(Id);
             _ctx.Courses.Remove(course);
             Save();
         }
@@ -125,21 +127,21 @@ namespace EFDemo1.Model
                 .Include(l => l.LecturerDetail)
                              .Include(l=>l.Teachings)
                              .ThenInclude(t=>t.Course)
-                           .OrderBy(l => l.LecturerId).ToList();
+                           .OrderBy(l => l.Id).ToList();
             return result;
         }
-        public Lecturer GetLecturer(int LecturerId)
+        public Lecturer GetLecturer(int Id)
         {
-            return _ctx.Lecturers.Find(LecturerId);
+            return _ctx.Lecturers.Find(Id);
         }
         public void AddLecturer(Lecturer lecturer)
         {
             _ctx.Lecturers.Add(lecturer);
             Save();
         }
-        public void EditLecturer(int LecturerId, Lecturer lecturer)
+        public void EditLecturer(int Id, Lecturer lecturer)
         {
-            Lecturer lecturerToEdit = _ctx.Lecturers.Find(LecturerId);
+            Lecturer lecturerToEdit = _ctx.Lecturers.Find(Id);
             lecturerToEdit.Name = lecturer.Name;
             lecturerToEdit.Payroll = lecturer.Payroll;
             lecturerToEdit.Feedback = lecturer.Feedback;
@@ -147,9 +149,9 @@ namespace EFDemo1.Model
 
             Save();
         }
-        public void DeleteLecturer(int LecturerId)
+        public void DeleteLecturer(int Id)
         {
-            var lecturer = _ctx.Lecturers.Find(LecturerId);
+            var lecturer = _ctx.Lecturers.Find(Id);
             _ctx.Lecturers.Remove(lecturer);
             Save();
         }

@@ -17,7 +17,7 @@ namespace EFDemo1.Model
             return newLecturer;
         }
 
-        public int LecturerId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public double Payroll { get; set; }
         public string Feedback { get; set; }
