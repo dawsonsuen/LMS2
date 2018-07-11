@@ -1,18 +1,8 @@
 ﻿<Properties StartupConfiguration="{53B4180E-395C-44F3-818B-B0EC8F50095A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="EFDemo1/Model/LMSDataStore.cs">
     <Files>
-      <File FileName="EFDemo1/Model/Lecturer.cs" Line="20" Column="20" />
-      <File FileName="EFDemo1/Model/LMSDbContext.cs" Line="108" Column="37" />
-      <File FileName="EFDemo1/Model/ILMSDataStore.cs" Line="25" Column="33" />
-      <File FileName="EFDemo1/Controllers/CourseController.cs" Line="1" Column="1" />
-      <File FileName="EFDemo1/Model/Course.cs" Line="25" Column="36" />
-      <File FileName="EFDemo1/Model/LMSDataStore.cs" Line="53" Column="48" />
-      <File FileName="EFDemo1/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="EFDemo1/Program.cs" Line="1" Column="1" />
-      <File FileName="EFDemo1/appsettings.json" Line="1" Column="1" />
-      <File FileName="EFDemo1/Controllers/EnrolmentController.cs" Line="1" Column="1" />
-      <File FileName="EFDemo1/Controllers/LecturerController.cs" Line="1" Column="1" />
-      <File FileName="EFDemo1/Controllers/StudentController.cs" Line="1" Column="1" />
+      <File FileName="EFDemo1/Model/LMSDbContext.cs" Line="57" Column="49" />
+      <File FileName="EFDemo1/Model/LMSDataStore.cs" Line="106" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

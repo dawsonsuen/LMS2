@@ -63,30 +63,30 @@ namespace EFDemo1.Model
         public IEnumerable<Student> GetAllStudents()
         {
             var result = _ctx.Students
-                           .Include(s => s.StudentDetail)
-                           .Include(s => s.StudentCountry)
-                             .Include(s => s.StudentAddresses)
+                           //.Include(s => s.StudentDetail)
+                           //.Include(s => s.StudentCountry)
+                             //.Include(s => s.StudentAddresses)
 
-                             .Include(s=>s.Enrolments)
-                             .ThenInclude(e =>e.Course)
-                             .ThenInclude(c => c.Assignments)
-                           .OrderBy(student => student.StudentId).ToList();
+                             //.Include(s=>s.Enrolments)
+                             //.ThenInclude(e =>e.Course)
+                             //.ThenInclude(c => c.Assignments)
+                           .OrderBy(student => student.Id).ToList();
 
 
                            return result;
         }
-        public Student GetStudent(int StudentId)
+        public Student GetStudent(int Id)
         {
-            return _ctx.Students.Find(StudentId);
+            return _ctx.Students.Find(Id);
         }
         public void AddStudent(Student student)
         {
             _ctx.Students.Add(student);
             Save();
         }
-        public void EditStudent(int StudentId, Student student)
+        public void EditStudent(int Id, Student student)
         {
-            Student studentToEdit = _ctx.Students.Find(StudentId);
+            Student studentToEdit = _ctx.Students.Find(Id);
             studentToEdit.Name = student.Name;
             studentToEdit.StudentFee = student.StudentFee;
             studentToEdit.CreditLimited = student.CreditLimited;
@@ -94,9 +94,9 @@ namespace EFDemo1.Model
 
             Save();
         }
-        public void DeleteStudent(int StudentId)
+        public void DeleteStudent(int Id)
         {
-            var student=_ctx.Students.Find(StudentId);
+            var student=_ctx.Students.Find(Id);
             _ctx.Students.Remove(student);
             Save();
         }

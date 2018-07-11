@@ -12858,13 +12858,13 @@
       "projectName": "EFDemo1",
       "projectPath": "/Users/uncharted/Desktop/LMS2/EFDemo1/EFDemo1.csproj",
       "packagesPath": "/Users/uncharted/.nuget/packages/",
-      "outputPath": "/Users/uncharted/Desktop/LMS2/EFDemo1/obj/",
+      "outputPath": "/Users/uncharted/Desktop/LMS2/EFDemo1/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/uncharted/.nuget/NuGet/NuGet.Config"
+        "/Users/uncharted/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12886,26 +12886,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.0, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.0"
           },
           "MySql.Data": {
             "target": "Package",
-            "version": "[8.0.11, )"
+            "version": "8.0.11"
           },
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[8.0.11, )"
+            "version": "8.0.11"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[2.4.0, )"
+            "version": "2.4.0"
           }
         },
         "imports": [

@@ -26,8 +26,8 @@ namespace EFDemo1.Model
                         .HasMany(c => c.Assignments)
                         .WithOne(a => a.Course);
             //Student
-            modelBuilder.Entity<Student>().HasKey(a => a.StudentId);
-            modelBuilder.Entity<Student>().Property(a => a.StudentId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Student>().HasKey(a => a.Id);
+            modelBuilder.Entity<Student>().Property(a => a.Id).ValueGeneratedOnAdd();
 
             //StudentDetail(one to one)
             modelBuilder.Entity<StudentDetail>().HasKey(a => a.StudentId);

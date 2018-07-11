@@ -13,10 +13,10 @@ namespace EFDemo1.Model
         void DeleteCourse(int Id);
         //Student
         IEnumerable<Student> GetAllStudents();
-        Student GetStudent(int StudentId);
+        Student GetStudent(int Id);
         void AddStudent(Student student);
-        void EditStudent(int StudentId, Student student);
-        void DeleteStudent(int StudentId);
+        void EditStudent(int Id, Student student);
+        void DeleteStudent(int Id);
         //Lecturer
         IEnumerable<Lecturer> GetAllLecturers();
         Lecturer GetLecturer(int Id);

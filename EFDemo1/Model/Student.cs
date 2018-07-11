@@ -15,7 +15,7 @@ namespace EFDemo1.Model
             newStudent.CreditLimited = student.CreditLimited;
             return newStudent;
         }
-        public int StudentId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int StudentFee { get; set; }
         public int CreditLimited { get; set; }

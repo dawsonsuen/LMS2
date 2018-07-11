@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using EFDemo1.Model;
 namespace EFDemo1.Controllers
 {
-    [Route("api/student")]
+    [Route("api/Student")]
     public class StudentController : Controller
     {
 
@@ -22,11 +22,11 @@ namespace EFDemo1.Controllers
             return Ok(_dbstore.GetAllStudents());
         }
 
-        [HttpGet("{StudentId}")]
-        public IActionResult Get(int StudentId)
+        [HttpGet("{Id}")]
+        public IActionResult Get(int Id)
         {
             IActionResult result;
-            var student = _dbstore.GetStudent(StudentId);
+            var student = _dbstore.GetStudent(Id);
             if (student != null)
             {
                 result = Ok(student);
@@ -48,17 +48,17 @@ namespace EFDemo1.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut("{StudentId}")]
-		public void Put(int StudentId, [FromBody] Student student)
+        [HttpPut("{Id}")]
+		public void Put(int Id, [FromBody] Student student)
         {
-			_dbstore.EditStudent(StudentId, student);
+			_dbstore.EditStudent(Id, student);
         }
 
         // DELETE api/values/5
-        [HttpDelete("{StudentId}")]
-        public void Delete(int StudentId)
+        [HttpDelete("{Id}")]
+        public void Delete(int Id)
         {
-            _dbstore.DeleteStudent(StudentId);
+            _dbstore.DeleteStudent(Id);
         }
     }
 }
