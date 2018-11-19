@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+
 namespace EFDemo1.Model
 {
-    public class LMSDataStore:ILMSDataStore
+    public class LMSDataStore: ILMSDataStore
     {
         private LMSDbContext _ctx;
         public LMSDataStore(LMSDbContext ctx)
@@ -14,31 +16,26 @@ namespace EFDemo1.Model
         }
        
         //For Course Controller
-        public IEnumerable<Course> GetAllCourses()
+        public async Task<IEnumerable<Course>> GetAllCourses()
         {
-            var result=_ctx.Courses
-                           //.Include(c => c.Assignments)
-                           //.Include(c => c.Enrolments)
-                           //.ThenInclude(e => e.Student)
-                           //.Include(c=>c.Teachings)
-                           //.ThenInclude(t=>t.Lecturer)
-                           .OrderBy(c => c.Id).ToList();
+            var result= await _ctx.Courses
+                             .Include(c => c.Lecturer)
+                             .Include(c => c.Enrolments)
+                             .ThenInclude(e => e.Student)
+                             .OrderBy(c => c.Id).ToListAsync();
             return result;
         }
-        //public async Task<IEnumerable<Course>> GetAllCoursesAsync()
-        //{
-        //    return await _ctx.Courses.OrderBy(course => course.Id).ToListAsync();
-        //}
+        
         public Course GetCourse(int Id)
         {
-            
-            return _ctx.Courses.Find(Id);
-        }
-		public void AddCourse(Course course)
-        {
 
+            return _ctx.Courses.Include(c => c.Lecturer).SingleOrDefault(x => x.Id == Id);
+        }
+        
+        public void AddCourse(Course course)
+        {
+            
 			_ctx.Courses.Add(course);
-			//_ctx.Courses.Add(assignment);    
             Save();
             
         }
@@ -46,11 +43,13 @@ namespace EFDemo1.Model
         public void EditCourse(int Id, Course course)
         {
             Course courseToEdit = _ctx.Courses.Find(Id);
-            courseToEdit.Name = course.Name;
-            courseToEdit.MaxNumber = course.MaxNumber;
-            courseToEdit.Credit = course.Credit;
-			courseToEdit.CourseCode = course.CourseCode;
-            //courseToEdit.Description = course.Description;
+            // courseToEdit.Name = course.Name;
+            // courseToEdit.MaxNumber = course.MaxNumber;
+            // courseToEdit.Credit = course.Credit;
+			// courseToEdit.CourseCode = course.CourseCode;
+            // courseToEdit.CourseDetail = course.CourseDetail;
+            courseToEdit.Lecturer = course.Lecturer;
+            _ctx.Courses.Update(courseToEdit);
             Save();
         }
         public void DeleteCourse(int Id)
@@ -60,24 +59,17 @@ namespace EFDemo1.Model
             Save();
         }
         //For Student Controller
-        public IEnumerable<Student> GetAllStudents()
+        public async Task<IEnumerable<Student>> GetAllStudents()
         {
-            var result = _ctx.Students
-                           //.Include(s => s.StudentDetail)
-                           //.Include(s => s.StudentCountry)
-                             //.Include(s => s.StudentAddresses)
-
-                             //.Include(s=>s.Enrolments)
-                             //.ThenInclude(e =>e.Course)
-                             //.ThenInclude(c => c.Assignments)
-                           .OrderBy(student => student.Id).ToList();
-
-
-                           return result;
+            var result = await _ctx.Students
+                               .Include(s=>s.Enrolments)
+                               .ThenInclude(e =>e.Course)
+                               .OrderBy(student => student.Id).ToListAsync();
+            return result;
         }
         public Student GetStudent(int Id)
         {
-            return _ctx.Students.Find(Id);
+            return _ctx.Students.SingleOrDefault(x => x.Id == Id);
         }
         public void AddStudent(Student student)
         {
@@ -100,16 +92,15 @@ namespace EFDemo1.Model
             _ctx.Students.Remove(student);
             Save();
         }
+
         //For Enrolment Controller
-
-        
-
         public void AddEnrolment(int StudentId,int CourseId)
         {
             Student student = _ctx.Students.Find(StudentId);
             Course course = _ctx.Courses.Find(CourseId);
             
 			var newEnrol = new Enrolment { StudentId = StudentId, CourseId = CourseId };
+            _ctx.Enrolments.Add(newEnrol);
             Save();
         }
         public void DeleteEnrolment(int StudentId,int CourseId)
@@ -120,19 +111,18 @@ namespace EFDemo1.Model
             }
             Save();
         }
+
         //For Lecturer Controller
-        public IEnumerable<Lecturer> GetAllLecturers()
+        public async Task<IEnumerable<Lecturer>> GetAllLecturers()
         {
-            var result = _ctx.Lecturers
-                .Include(l => l.LecturerDetail)
-                             .Include(l=>l.Teachings)
-                             .ThenInclude(t=>t.Course)
-                           .OrderBy(l => l.Id).ToList();
+            var result = await _ctx.Lecturers
+                               .Include(t=>t.Course)
+                               .OrderBy(l => l.Id).ToListAsync();
             return result;
         }
         public Lecturer GetLecturer(int Id)
         {
-            return _ctx.Lecturers.Find(Id);
+            return _ctx.Lecturers.SingleOrDefault(x => x.Id == Id);
         }
         public void AddLecturer(Lecturer lecturer)
         {
@@ -145,14 +135,47 @@ namespace EFDemo1.Model
             lecturerToEdit.Name = lecturer.Name;
             lecturerToEdit.Payroll = lecturer.Payroll;
             lecturerToEdit.Feedback = lecturer.Feedback;
-
-
+            
             Save();
         }
         public void DeleteLecturer(int Id)
         {
             var lecturer = _ctx.Lecturers.Find(Id);
             _ctx.Lecturers.Remove(lecturer);
+            Save();
+        }
+
+        //For User Controller
+        public IEnumerable<Profile> GetAllProfiles()
+        {
+            var result = _ctx.Profiles
+                
+                           .OrderBy(u => u.Id).ToList();
+            return result;
+        }
+        public Profile GetProfile(int Id)
+        {
+            return _ctx.Profiles.Find(Id);
+        }
+        public void AddProfile(Profile profile)
+        {
+            _ctx.Profiles.Add(profile);
+            Save();
+        }
+        public void EditProfile(int Id, Profile profile)
+        {
+            Profile profileToEdit = _ctx.Profiles.Find(Id);
+            profileToEdit.Name = profile.Name;
+            profileToEdit.UserId = profile.UserId;
+            profileToEdit.PhoneNumber = profile.PhoneNumber;
+            profileToEdit.EmailAddress = profile.EmailAddress;
+
+            Save();
+        }
+        public void DeleteProfile(int Id)
+        {
+            var profile = _ctx.Profiles.Find(Id);
+            _ctx.Profiles.Remove(profile);
             Save();
         }
 		public bool Save()

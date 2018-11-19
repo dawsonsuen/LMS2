@@ -7,22 +7,23 @@ namespace EFDemo1.Model
 {
     public class Lecturer
     {
-        public static Lecturer CreateLecturerFromBody(Lecturer lecturer)
+        public static Lecturer CreateLecturerFromBody(Lecturer lecturerInputModel)
         {
             Lecturer newLecturer = new Lecturer();
-            newLecturer.Name = lecturer.Name;
-            newLecturer.Payroll = lecturer.Payroll;
-            newLecturer.Feedback = lecturer.Feedback;
-
+            newLecturer.Name = lecturerInputModel.Name;
+            newLecturer.Payroll = lecturerInputModel.Payroll;
+            newLecturer.Feedback = lecturerInputModel.Feedback;
+            newLecturer.Email = lecturerInputModel.Email;
             return newLecturer;
         }
 
         public int Id { get; set; }
+        public string LecturerCode { get; set; }
         public string Name { get; set; }
         public double Payroll { get; set; }
         public string Feedback { get; set; }
-		public LecturerDetail LecturerDetail { get; set; }
-        public ICollection<Teaching> Teachings { get; set; }
+		public string Email { get; set; }
+        public Course Course { get; set; }
         public Lecturer()
         {
         }

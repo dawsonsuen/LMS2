@@ -17,9 +17,9 @@ namespace EFDemo1.Controllers
             _dbstore = dbstore;
         }
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_dbstore.GetAllStudents());
+            return Ok(await _dbstore.GetAllStudents());
         }
 
         [HttpGet("{Id}")]
@@ -44,6 +44,7 @@ namespace EFDemo1.Controllers
         {
             Student newStudent = Student.CreateStudentFromBody(input);
 			_dbstore.AddStudent(newStudent);
+            _dbstore.Save();
             return Ok();
         }
 

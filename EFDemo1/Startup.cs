@@ -28,6 +28,8 @@ namespace EFDemo1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             services.AddMvc()
                     .AddJsonOptions(o =>
             {
@@ -64,8 +66,14 @@ namespace EFDemo1
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
-            app.UseMvc();
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials());             
 
+
+            app.UseMvc();
         }
     }
 }

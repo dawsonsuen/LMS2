@@ -6,27 +6,33 @@ namespace EFDemo1.Model
     public interface ILMSDataStore
     {
         //Course
-        IEnumerable<Course> GetAllCourses();
-        Course GetCourse(int Id);
-		void AddCourse(Course course);
-        void EditCourse(int Id, Course course);
-        void DeleteCourse(int Id);
+        Task<IEnumerable<Course>> GetAllCourses();
+        Course GetCourse(int id);
+        void AddCourse(Course course);
+        void EditCourse(int id, Course course);
+        void DeleteCourse(int id);
         //Student
-        IEnumerable<Student> GetAllStudents();
-        Student GetStudent(int Id);
+        Task<IEnumerable<Student>> GetAllStudents();
+        Student GetStudent(int id);
         void AddStudent(Student student);
-        void EditStudent(int Id, Student student);
-        void DeleteStudent(int Id);
+        void EditStudent(int id, Student student);
+        void DeleteStudent(int id);
         //Lecturer
-        IEnumerable<Lecturer> GetAllLecturers();
-        Lecturer GetLecturer(int Id);
+        Task<IEnumerable<Lecturer>> GetAllLecturers();
+        Lecturer GetLecturer(int id);
         void AddLecturer(Lecturer lecturer);
-        void EditLecturer(int Id, Lecturer lecturer);
-        void DeleteLecturer(int Id);
+        void EditLecturer(int id, Lecturer lecturer);
+        void DeleteLecturer(int id);
+        //User
+        IEnumerable<Profile> GetAllProfiles();
+        Profile GetProfile(int id);
+        void AddProfile(Profile profile);
+        void EditProfile(int id, Profile profile);
+        void DeleteProfile(int id);
 		//Enrolment
         
-		void AddEnrolment(int CourseId,int StudentId);
-        void DeleteEnrolment(int CourseId, int StudentId);
+		void AddEnrolment(int studentId,int courseId);
+        void DeleteEnrolment(int studentId, int courseId);
 		bool Save();
     }
 }

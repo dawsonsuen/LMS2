@@ -1,13 +1,19 @@
 ﻿<Properties StartupConfiguration="{53B4180E-395C-44F3-818B-B0EC8F50095A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EFDemo1/Model/LMSDataStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EFDemo1/Model/Course.cs">
     <Files>
-      <File FileName="EFDemo1/Model/LMSDbContext.cs" Line="57" Column="49" />
-      <File FileName="EFDemo1/Model/LMSDataStore.cs" Line="106" Column="1" />
+      <File FileName="EFDemo1/Model/LMSDataStore.cs" Line="65" Column="36" />
+      <File FileName="EFDemo1/Model/Student.cs" Line="17" Column="26" />
+      <File FileName="EFDemo1/Controllers/StudentController.cs" Line="47" Column="23" />
+      <File FileName="EFDemo1/Model/LMSDbContext.cs" Line="18" Column="1" />
+      <File FileName="EFDemo1/Program.cs" Line="17" Column="1" />
+      <File FileName="EFDemo1/Model/Course.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/uncharted/Desktop/LMS2/EFDemo1/Controllers/UserController.cs" relfile="EFDemo1/Controllers/UserController.cs" line="45" column="39" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

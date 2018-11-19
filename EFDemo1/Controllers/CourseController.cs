@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EFDemo1.Model;
+using Microsoft.AspNetCore.Cors;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace EFDemo1.Controllers
@@ -16,9 +17,9 @@ namespace EFDemo1.Controllers
             _dbstore = dbstore;
         }
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_dbstore.GetAllCourses());
+            return Ok(await _dbstore.GetAllCourses());
         }
 
         [HttpGet("{Id}")]
@@ -39,20 +40,20 @@ namespace EFDemo1.Controllers
 		public IActionResult Post([FromBody]Course input)
         {
             Course newCourse = Course.CreateCourseFromBody(input);
-			//Assignment newAssignment = Assignment.CreateAssignmentFromBody(enter);
             _dbstore.AddCourse(newCourse);
-			//_dbstore.Save();
+			_dbstore.Save();
             return Ok();
         }
 
-        // PUT api/values/5
+        // PUT api/values/id
         [HttpPut("{Id}")]
+        
         public void Put(int Id, [FromBody] Course course)
         {
 			_dbstore.EditCourse(Id, course); 
         }
 
-        // DELETE api/values/5
+        // DELETE api/values/id
         [HttpDelete("{Id}")]
         public void Delete(int Id)
         {

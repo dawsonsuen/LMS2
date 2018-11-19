@@ -10,18 +10,18 @@ namespace EFDemo1.Model
         public static Enrolment CreateEnrolmontFromBody(Enrolment enrolment)
         {
             Enrolment newEnrolment = new Enrolment();
-            newEnrolment.CourseGrade = enrolment.CourseGrade;
-            newEnrolment.EnrolmentDate = enrolment.EnrolmentDate;
-            newEnrolment.Status = enrolment.Status;
+            // newEnrolment.CourseGrade = enrolment.CourseGrade;
+            // newEnrolment.EnrolmentDate = enrolment.EnrolmentDate;
+            // newEnrolment.Status = enrolment.Status;
             return newEnrolment;
         }
         public int StudentId { get; set; }
         public int CourseId { get; set; }
         public Student Student { get; set; }
         public Course Course { get; set; }
-        public string CourseGrade { get; set; }
-        public DateTime EnrolmentDate { get; set; }
-        public string Status { get; set; }
+        // public string CourseGrade { get; set; }
+        // public DateTime EnrolmentDate { get; set; }
+        // public string Status { get; set; }
         public Enrolment()
         {
         }

@@ -17,9 +17,9 @@ namespace EFDemo1.Controllers
             _dbstore = dbstore;
         }
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_dbstore.GetAllLecturers());
+            return Ok(await _dbstore.GetAllLecturers());
         }
 
         [HttpGet("{Id}")]
@@ -55,7 +55,7 @@ namespace EFDemo1.Controllers
         }
 
         // DELETE api/values/5
-        [HttpDelete("{LecturerId}")]
+        [HttpDelete("{Id}")]
         public void Delete(int Id)
         {
 			_dbstore.DeleteLecturer(Id);
