@@ -1,0 +1,9 @@
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\bin\Debug\netstandard2.0\EFDemo1.Common.deps.json
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\bin\Debug\netstandard2.0\EFDemo1.Common.dll
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\bin\Debug\netstandard2.0\EFDemo1.Common.pdb
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.csprojAssemblyReference.cache
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.csproj.CoreCompileInputs.cache
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.AssemblyInfoInputs.cache
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.AssemblyInfo.cs
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.dll
+C:\Development\ITFA\LMS2\src\EFDemo1.Common\obj\Debug\netstandard2.0\EFDemo1.Common.pdb

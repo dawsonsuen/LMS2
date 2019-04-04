@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\EFDemo1.Api.RequestHandlers.csproj",
+  "TargetFramework": "netstandard2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

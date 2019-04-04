@@ -1,0 +1,353 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "cb21edd28eed620137cc3bcd48a4745873a44927"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "EFDemo1.ReadModel/1.0.0": {
+        "dependencies": {
+          "EFDemo1.Common": "1.0.0",
+          "EFDemo1.Domain": "1.0.0",
+          "JsonFlatFileDataStore": "2.1.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "EFDemo1.ReadModel.dll": {}
+        }
+      },
+      "JsonFlatFileDataStore/2.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JsonFlatFileDataStore.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "LiteDB/4.1.4": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.1.4.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.CSharp.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "NEvilES/1.1.0-alpha1": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NEvilES.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "NEvilES.DataStore/1.1.0-alpha1": {
+        "dependencies": {
+          "NEvilES": "1.1.0-alpha1",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NEvilES.DataStore.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "NEvilES.Extensions.DependencyInjection/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "NEvilES": "1.1.0-alpha1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NEvilES.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.TypeExtensions/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "EFDemo1.Common/1.0.0": {
+        "dependencies": {
+          "LiteDB": "4.1.4",
+          "NEvilES": "1.1.0-alpha1",
+          "NEvilES.DataStore": "1.1.0-alpha1",
+          "NEvilES.Extensions.DependencyInjection": "1.0.0"
+        },
+        "runtime": {
+          "EFDemo1.Common.dll": {}
+        }
+      },
+      "EFDemo1.Domain/1.0.0": {
+        "dependencies": {
+          "EFDemo1.Common": "1.0.0",
+          "NEvilES": "1.1.0-alpha1",
+          "NEvilES.DataStore": "1.1.0-alpha1",
+          "NEvilES.Extensions.DependencyInjection": "1.0.0"
+        },
+        "runtime": {
+          "EFDemo1.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EFDemo1.ReadModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JsonFlatFileDataStore/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vVczOtF555XO2k9H2wiVmcE84cf0fTw8qr3jLXyWM+iVlkNE3PyIzyrX44m36XQqQyY82CQRbsSVWEWhjOPc0w==",
+      "path": "jsonflatfiledatastore/2.1.0",
+      "hashPath": "jsonflatfiledatastore.2.1.0.nupkg.sha512"
+    },
+    "LiteDB/4.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g4g9JlHzRBZl+Gd2UbiRdszZ7t8wozU2wX7+5xY5uE79tmcgcDhha+ubAP84G1VLbwQmhBGCzRfIx+epLmJciQ==",
+      "path": "litedb/4.1.4",
+      "hashPath": "litedb.4.1.4.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nshYaLTn73Ie+/yTkb7EZIXwQeFIXsYCBy/jSY9bMayYykGNjdWa25frayhuPAGVbZpEgfgp3d4JRVEuVyEqQ==",
+      "path": "microsoft.extensions.dependencyinjection/2.1.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PW1596sF97gpIc1JuUuYvTmeLfeqC5whbWPsWgJhN0fdwz683him3b/HB0dqhFesVssOjnnA0fEz4+S0gUeBqA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aLP/lDScpS/PoH0rbTyfSvevLEATigpyEUyIwVZKe6iP6t60uS6rdwKY4tDJ23CdJx8TJQTkC/wx8Bvg2tLcUw==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CW/k4lk23hcCxnH8YkvJSiTmO090nqXA889WpP4bg5RbL7izbHDqP1qobeXbwATg4F6DbZmNQV/J0HkL2fVUaA==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "NEvilES/1.1.0-alpha1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7hA4+q1iUQe4+jOztLDw7lzLzr7n/4QdFazvGygNgkqQcUwOG8RTQDuVkN7SFdc8RLk3OnOA1vCPPfNwxke3IQ==",
+      "path": "neviles/1.1.0-alpha1",
+      "hashPath": "neviles.1.1.0-alpha1.nupkg.sha512"
+    },
+    "NEvilES.DataStore/1.1.0-alpha1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZSC76ql3bqkdjZAD4pHkQEK00FHNzoHUNmOXX24OpZrBGnb3bvb5t9xcVr1dBH93mIAt2fLRZ4JjcyMf5BfdQw==",
+      "path": "neviles.datastore/1.1.0-alpha1",
+      "hashPath": "neviles.datastore.1.1.0-alpha1.nupkg.sha512"
+    },
+    "NEvilES.Extensions.DependencyInjection/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8MmX8uYbPp6joU2CFPNv3JM6JJDfopm05XF4JxAoj2WZ4gma8rMj5q+atAEoLXCs1S48zQxLbHHhhkXEhvNXZw==",
+      "path": "neviles.extensions.dependencyinjection/1.0.0",
+      "hashPath": "neviles.extensions.dependencyinjection.1.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MUJMvbVJBJGmiNY6J26PfhRdf28tIYsyamEhUgbprZMDq3Lsd1ELUQdbY/0/hcae87b31JzzHW6PWJuCW+z4SQ==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OGMwwXfhli4SDMGDOUQsV4BghiMZSRyE7whlAPS24dIvGk+agjjQ08CK85zotOIzTV/qTPg5bFys5ERamv2hJw==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T0bHaeMjE3E7SKGTSS3c62xbUZpjI0AnPfFSY9Ajp4knW7iILafmJVhNwSOkG+ltJCyYSIqQsgEz5TNp4NkcQQ==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.TypeExtensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZiuI+UMsMdhE1e/nSDtPpp+HX+NFTqpmQ/dknVsbA1DdMo5uRhQiS9ruzp+vJyxGI7bgPGvI/jKSYtT7rO5s6Q==",
+      "path": "system.reflection.typeextensions/4.3.0",
+      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TMF18HSZ6wV5lL4UBUIm2FoAJHkIhVHikaRJU/8r2H6yqp9z6mptFl7EG6Pmn/tc/rVwIc2Yw0miB4WT4Agpsg==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gdw69xjPe14TOeKWbiEjqL0oB7uD1WYY5O6P/zLdg9buCy6PfeTuKm1UPREuGW/+CMrU7ph7hgo42OxDOhuAfg==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RyZ8aCtqhKWgM2Is3JsE1Y5b/fLJKf1meb3d7UbMkFDRhSJZQdHM5tUuQabAi6WphV+Wqm+o5+UNOGvMrWSzSg==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "EFDemo1.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EFDemo1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

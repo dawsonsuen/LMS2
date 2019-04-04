@@ -1,0 +1,12 @@
+C:\Development\ITFA\LMS2\src\EFDemo1.Domain\bin\Debug\netstandard2.0\EFDemo1.Domain.deps.json
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\bin\Debug\netstandard2.0\EFDemo1.Domain.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\bin\Debug\netstandard2.0\EFDemo1.Domain.pdb
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\bin\Debug\netstandard2.0\EFDemo1.Common.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\bin\Debug\netstandard2.0\EFDemo1.Common.pdb
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.csprojAssemblyReference.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.csproj.CoreCompileInputs.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.AssemblyInfoInputs.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.AssemblyInfo.cs
+C:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.csproj.CopyComplete
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.Domain\obj\Debug\netstandard2.0\EFDemo1.Domain.pdb

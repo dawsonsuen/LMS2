@@ -1,10 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EFDemo1.Common\EFDemo1.Common.csproj" />
-    <ProjectReference Include="..\EFDemo1.Domain\EFDemo1.Domain.csproj" />
+    <ProjectReference Include="..\EFDemo1.Common\EFDemo1.Common.csproj"/>
+    <ProjectReference Include="..\EFDemo1.Domain\EFDemo1.Domain.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="JsonFlatFileDataStore" Version="2.1.0"/>
   </ItemGroup>
 </Project>

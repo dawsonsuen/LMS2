@@ -1,0 +1,14 @@
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.ReadModel.deps.json
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.ReadModel.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.ReadModel.pdb
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.Common.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.Domain.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.Common.pdb
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\bin\Debug\netstandard2.0\EFDemo1.Domain.pdb
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.csprojAssemblyReference.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.csproj.CoreCompileInputs.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.AssemblyInfoInputs.cache
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.AssemblyInfo.cs
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.csproj.CopyComplete
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.dll
+c:\Development\ITFA\LMS2\src\EFDemo1.ReadModel\obj\Debug\netstandard2.0\EFDemo1.ReadModel.pdb

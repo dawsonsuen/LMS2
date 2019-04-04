@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
-using Swashbuckle.AspNetCore.Swagger;
+// using Swashbuckle.AspNetCore.Swagger;
 using EFDemo1.Model;
 
 namespace EFDemo1
@@ -43,14 +43,14 @@ namespace EFDemo1
                 o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 o.SerializerSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
             });
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
-            });
+            // services.AddSwaggerGen(c =>
+            // {
+            //     c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            // });
 
             services.AddDbContext<LMSDbContext>();
             services.AddScoped<ILMSDataStore, LMSDataStore>();
-            services.AddSingleton<IEventTypeLookupStrategy>(lookup);
+            // services.AddSingleton<IEventTypeLookupStrategy>(lookup);
 
         }
 
@@ -62,12 +62,12 @@ namespace EFDemo1
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
+            // app.UseSwagger();
 
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
+            // app.UseSwaggerUI(c =>
+            // {
+            //     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            // });
             app.UseCors(builder => builder
                 .AllowAnyOrigin()
                 .AllowAnyMethod()

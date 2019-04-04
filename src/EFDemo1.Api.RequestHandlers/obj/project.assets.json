@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "MediatR/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -29,6 +38,19 @@
     }
   },
   "libraries": {
+    "MediatR/6.0.0": {
+      "sha512": "R01T5Af1kSH9lBvlxdTeJOr+ugPwfy0FsFq15XsNAIA8GSUYwHW7lfvYGwhBynwJVXWxRwieqxOxCFEV9GO+SQ==",
+      "type": "package",
+      "path": "mediatr/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/MediatR.dll",
+        "lib/netstandard2.0/MediatR.dll",
+        "mediatr.6.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "aLP/lDScpS/PoH0rbTyfSvevLEATigpyEUyIwVZKe6iP6t60uS6rdwKY4tDJ23CdJx8TJQTkC/wx8Bvg2tLcUw==",
       "type": "package",
@@ -174,6 +196,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "MediatR >= 6.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -184,16 +207,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\EFDemo1.Api.RequestHandlers.csproj",
+      "projectUniqueName": "c:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\EFDemo1.Api.RequestHandlers.csproj",
       "projectName": "EFDemo1.Api.RequestHandlers",
-      "projectPath": "C:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\EFDemo1.Api.RequestHandlers.csproj",
+      "projectPath": "c:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\EFDemo1.Api.RequestHandlers.csproj",
       "packagesPath": "C:\\Users\\Naseema\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\obj\\",
+      "outputPath": "c:\\Development\\ITFA\\LMS2\\src\\EFDemo1.Api.RequestHandlers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+        "c:\\Development\\ITFA\\LMS2\\NuGet.Config",
         "C:\\Users\\Naseema\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -201,8 +225,8 @@
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/ebyte23/api/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
@@ -218,6 +242,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "MediatR": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

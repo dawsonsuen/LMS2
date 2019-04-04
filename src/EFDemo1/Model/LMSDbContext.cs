@@ -25,17 +25,17 @@ namespace EFDemo1.Model
             //Enrolment(many Student,many Course to many)
             modelBuilder.Entity<Enrolment>()
                         .HasKey(e => new { e.CourseId, e.StudentId });
-            
+
             modelBuilder.Entity<Enrolment>()
                         .HasOne(e => e.Course)
                         .WithMany(c => c.Enrolments)
                         .HasForeignKey(e => e.CourseId);
-            
+
             modelBuilder.Entity<Enrolment>()
                         .HasOne(e => e.Student)
                         .WithMany(s => s.Enrolments)
                         .HasForeignKey(e => e.StudentId);
-            
+
             //Lecturer
             modelBuilder.Entity<Lecturer>().HasOne(l => l.Course);
 
@@ -46,7 +46,7 @@ namespace EFDemo1.Model
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             var connectionString = "server = 13.54.17.147; userid = lms_teamaroot; pwd =password; port = 3306; database = lms_teama; sslmode = none";
-            optionsBuilder.UseMySQL(connectionString);
+            // optionsBuilder.UseMySQL(connectionString);
             base.OnConfiguring(optionsBuilder);
         }
     }

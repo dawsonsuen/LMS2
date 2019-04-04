@@ -7,11 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="NEvilES" Version="1.1.0-alpha1" />
+    <PackageReference Include="NEvilES.DataStore" Version="1.1.0-alpha1" />
+    <PackageReference Include="NEvilES.Extensions.DependencyInjection" Version="1.0.0" />
+        <PackageReference Include="JsonFlatFileDataStore" Version="2.1.0"/>
+
   </ItemGroup>
-<ItemGroup>
+
+    <ItemGroup>
      <ProjectReference Include="..\..\src\EFDemo1.Common\EFDemo1.Common.csproj" />
+     <ProjectReference Include="..\..\src\EFDemo1.Domain\EFDemo1.Domain.csproj" />
+     <ProjectReference Include="..\..\src\EFDemo1.ReadModel\EFDemo1.ReadModel.csproj" />
+
    </ItemGroup>
 </Project>
